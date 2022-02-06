@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "ad1cdc9c-d2ba-4615-9901-c3f18b571361",
+		"name": "SD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:5000 (Get)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/placeList",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"placeList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000 (Post Artist)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/artist/1?name=Ballet Nacional Rus&country=Rússia&disciplines=DANCE&disciplines=THEATRE",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"artist",
+						"1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ballet Nacional Rus"
+						},
+						{
+							"key": "country",
+							"value": "Rússia"
+						},
+						{
+							"key": "disciplines",
+							"value": "DANCE"
+						},
+						{
+							"key": "disciplines",
+							"value": "THEATRE"
+						}
+					]
+				},
+				"description": "Post"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000 (Post Place)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/place?name=Ballet Nacional Rus&city=BCN&country=Rússia&capacity=400",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"place"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ballet Nacional Rus"
+						},
+						{
+							"key": "city",
+							"value": "BCN"
+						},
+						{
+							"key": "country",
+							"value": "Rússia"
+						},
+						{
+							"key": "capacity",
+							"value": "400"
+						}
+					]
+				},
+				"description": "Post"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000 (Post Show)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/show?name=AGG&date=1999-03-22&place=p1&place=p2&artist=a1&artist=a2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"show"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "AGG"
+						},
+						{
+							"key": "date",
+							"value": "1999-03-22"
+						},
+						{
+							"key": "place",
+							"value": "p1"
+						},
+						{
+							"key": "place",
+							"value": "p2"
+						},
+						{
+							"key": "artist",
+							"value": "a1"
+						},
+						{
+							"key": "artist",
+							"value": "a2"
+						}
+					]
+				},
+				"description": "Post"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000 (Delete)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/show/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"show",
+						"3"
+					]
+				},
+				"description": "delete"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000 (Put Artist)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/artist/1?name=Ballet Nacional Rus&country=Rússia&disciplines=DANCE&disciplines=THEATRE",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"artist",
+						"1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ballet Nacional Rus"
+						},
+						{
+							"key": "country",
+							"value": "Rússia"
+						},
+						{
+							"key": "disciplines",
+							"value": "DANCE"
+						},
+						{
+							"key": "disciplines",
+							"value": "THEATRE"
+						}
+					]
+				},
+				"description": "Post"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000 (Put Place)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/place/1?name=Ballet Nacional Rus&city=BCN&country=Rússia&capacity=800",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"place",
+						"1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ballet Nacional Rus"
+						},
+						{
+							"key": "city",
+							"value": "BCN"
+						},
+						{
+							"key": "country",
+							"value": "Rússia"
+						},
+						{
+							"key": "capacity",
+							"value": "800"
+						}
+					]
+				},
+				"description": "Put"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000 (Put Show)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/show/1?name=Circ Solei&date=1999-03-22&place=p1put&place=p2put&artist=a1put&artist=a2put",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"show",
+						"1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Circ Solei"
+						},
+						{
+							"key": "date",
+							"value": "1999-03-22"
+						},
+						{
+							"key": "place",
+							"value": "p1put"
+						},
+						{
+							"key": "place",
+							"value": "p2put"
+						},
+						{
+							"key": "artist",
+							"value": "a1put"
+						},
+						{
+							"key": "artist",
+							"value": "a2put"
+						}
+					]
+				},
+				"description": "Post"
+			},
+			"response": []
+		}
+	]
+}

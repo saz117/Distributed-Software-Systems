@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "4348fa8b-c287-4bc6-9eb2-b51f08d52179",
+		"name": "SD 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/show/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"show",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/show/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"show",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Artist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/artist?name=Ballet Nacional Rus&country=Rússia&disciplines=DANCE",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"artist"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ballet Nacional Rus"
+						},
+						{
+							"key": "country",
+							"value": "Rússia"
+						},
+						{
+							"key": "disciplines",
+							"value": "DANCE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Place",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/place?name=Rusia&city=bcncity&country=bcnCountry&capacity=8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"place"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Rusia"
+						},
+						{
+							"key": "city",
+							"value": "bcncity"
+						},
+						{
+							"key": "country",
+							"value": "bcnCountry"
+						},
+						{
+							"key": "capacity",
+							"value": "8000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Show",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/show?name=postShow&date=2021-10-04T00:00:00&price=80.0&place=Rusiaput&artist=nameput",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"show"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "postShow"
+						},
+						{
+							"key": "date",
+							"value": "2021-10-04T00:00:00"
+						},
+						{
+							"key": "price",
+							"value": "80.0"
+						},
+						{
+							"key": "place",
+							"value": "Rusiaput"
+						},
+						{
+							"key": "artist",
+							"value": "nameput"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/artist/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"artist",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Artist",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/artist/1?name=nameput&country=countryput&disciplines=OTHER&disciplines=THEATRE",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"artist",
+						"1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "nameput"
+						},
+						{
+							"key": "country",
+							"value": "countryput"
+						},
+						{
+							"key": "disciplines",
+							"value": "OTHER"
+						},
+						{
+							"key": "disciplines",
+							"value": "THEATRE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Place",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/place/1?name=Rusiaput&city=bcncityput&country=bcnCountryput&capacity=8000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"place",
+						"1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Rusiaput"
+						},
+						{
+							"key": "city",
+							"value": "bcncityput"
+						},
+						{
+							"key": "country",
+							"value": "bcnCountryput"
+						},
+						{
+							"key": "capacity",
+							"value": "8000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Show",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/show/2?name=postShow&date=2021-10-04T00:00:00&price=80.0&place=Rusiaput&artist=nameput",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"show",
+						"2"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "postShow"
+						},
+						{
+							"key": "date",
+							"value": "2021-10-04T00:00:00"
+						},
+						{
+							"key": "price",
+							"value": "80.0"
+						},
+						{
+							"key": "place",
+							"value": "Rusiaput"
+						},
+						{
+							"key": "artist",
+							"value": "nameput"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

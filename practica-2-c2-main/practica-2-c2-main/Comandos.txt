@@ -1,0 +1,131 @@
+flask db init
+flask db migrate -m "Initial migration"
+flask db upgrade
+flask shell
+from db import db
+from models.artist import ArtistModel, DisciplineModel
+ArtistModel
+DisciplineModel
+from models.show import ShowModel
+ShowModel
+from models.place import PlaceModel
+PlaceModel
+
+new_discipline1 = DisciplineModel('THEATRE')
+new_discipline2 = DisciplineModel('MUSIC')
+new_discipline3 = DisciplineModel('DANCE')
+new_discipline4 = DisciplineModel('CIRCUS')
+new_discipline5 = DisciplineModel('OTHER')
+db.session.add(new_discipline1)
+db.session.add(new_discipline2)
+db.session.add(new_discipline3)
+db.session.add(new_discipline4)
+db.session.add(new_discipline5)
+db.session.commit()
+
+new_artist1 = ArtistModel('La Calòrica','Spain')
+new_artist2= ArtistModel('Txarango','Spain') 
+new_artist1.discipline.append(new_discipline2)
+new_artist1.discipline.append(new_discipline3)
+new_artist2.discipline.append(new_discipline1)
+new_artist2.discipline.append(new_discipline4)
+db.session.commit()
+
+from datetime import datetime
+new_show1=ShowModel('El gran Circ',datetime.strptime('2021-07-04', "%Y-%m-%d"),'50.0')
+new_show2=ShowModel('Tour de France',datetime.strptime('2021-07-05', "%Y-%m-%d"),'100.0')
+db.session.add(new_show1)
+db.session.add(new_show2)
+db.session.commit()
+
+new_show1.artists.append(new_artist1)
+new_show2.artists.append(new_artist2)
+db.session.add(new_show1)
+db.session.add(new_show2)
+db.session.commit()
+
+
+new_place1=PlaceModel('Sants Estacio','Barcelona','Spain',100)
+new_place2=PlaceModel('Lorca','Murcia','Germany',5000)
+db.session.add(new_place1)
+db.session.add(new_place2)
+db.session.commit()
+
+new_show1.place = new_place1
+new_show2.place = new_place2
+db.session.commit()
+
+
+new_artist1 = ArtistModel('La Calòrica','Spain','THEATRE')
+new_artist2= ArtistModel('Txarango','Spain','MUSIC') 
+db.session.add(new_artist1)
+db.session.add(new_artist2)
+db.session.commit()
+
+from datetime import datetime
+new_show1=ShowModel('El gran Circ',datetime.strptime('2021-07-04', "%Y-%m-%d"),'50.0')
+db.session.add(new_show1)
+db.session.commit()
+
+ArtistModel.query.filter_by(name="Txarango").first()
+artist = ArtistModel.query.filter_by(name="Txarango").first()
+artist.name, artist.country, artist.discipline
+artists = ArtistModel.query.filter_by(country='Spain').all()
+artists
+artists[0].name, artists[1].name
+
+artist
+artist.discipline = "CIRCUS"
+db.session.add(artist)
+db.session.commit()
+artist = ArtistModel.query.filter_by(name="Txarango").first()
+artist.name, artist.country, artist.discipline
+
+new_show1.artists.append(artist)
+db.session.add(new_show1)
+db.session.commit()
+
+show = ShowModel.query.filter_by(id=1).filter(ShowModel.artists.any(name='Txarango')).first()
+show.name
+
+artist = ArtistModel.query.join(ArtistModel.shows).filter(ShowModel.id == 1).filter(ArtistModel.name == 'Txarango').first()
+artist
+artist.name
+
+ArtistModel.query.join(ArtistModel.shows).filter(ShowModel.id == 1).filter(ArtistModel.name == 'Txarango')
+print(ArtistModel.query.join(ArtistModel.shows).filter(ShowModel.id == 1).filter(ArtistModel.name == 'Txarango'))
+
+show.artists.remove(artist)
+db.session.add(show)
+db.session.commit()
+
+artist = ArtistModel.query.join(ArtistModel.shows).filter(ShowModel.id == 1).filter(ArtistModel.name == 'Txarango').first()
+artist
+artist == None
+
+ArtistModel.query.all()
+artist = ArtistModel.query.filter_by(id=1).first()
+artist
+db.session.delete(artist)
+db.session.commit()
+ArtistModel.query.all()
+
+
+
+db.session.close()
+exit()
+
+
+
+
+#SESION4
+#Despues de reiniciar base de datos explicado en add_data.py
+
+flask shell
+
+from db import db
+from models.accounts import AccountsModel
+from models.orders import OrdersModel
+test_user=AccountsModel(username='test')
+db.session.add(test_user)
+db.session.commit()
